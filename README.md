@@ -49,7 +49,7 @@ service network-manager restart
 ---
 
 
-**#  📝 Instructions**
+**#  📝 Instructions** # WiFi-DOS-Kali
 
 1. Save the script as `wifi_dos_attack.py`.
 
