@@ -47,7 +47,9 @@ service network-manager restart
 
 
 ---
-## 📝 Instructions
+
+
+**#  📝 Instructions**
 
 1. Save the script as `wifi_dos_attack.py`.
 
